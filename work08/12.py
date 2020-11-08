@@ -1,14 +1,12 @@
 
 x = int(input('Дано число X: '))
-x1, x2 = 1, 1
+step1, step2, result_x1, result_x2 = 0, 1, 1, 1
+for _ in range(6):
+    step1 = step1 * 2 + 1
+    result_x1 *= (x - step1)
 
-if not ((x % 2 == 0) and (1 < x < 65)):
-    for i in range(1, 65):
-        if i % 2 == 0:
-            x2 *= (x - i)
-        else:
-            x1 *= (x - i)
-    print('Ответ: ', x1 / x2)
+for _ in range(6):
+    step2 = step2 * 2
+    result_x2 *= (x - step2)
 
-else:
-    print('На нуль делить нельзя!')
+print(result_x1/result_x2)
