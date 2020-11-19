@@ -13,13 +13,15 @@ message_len = 0
 for _ in message:
     message_len += 1
 
-if message_len > 1:
-    for key, value in enumerate(message):
-        if key == 0:
-            s1 = value
-        elif key == message_len - 1:
-            s2 = value
+counter = 0
 
+if message_len > 1:
+    for symbol in message:
+        if counter == 0:
+            s1 = symbol
+        elif counter == message_len - 1:
+            s2 = symbol
+        counter += 1
     if s1 == s2:
         print('Первая и последняя буквы одинаковые')
     else:
