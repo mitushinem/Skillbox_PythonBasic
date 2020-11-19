@@ -17,16 +17,16 @@ while True:
             pos_x += 1
             pos_y = pos_y
     elif user_data == 'W':
-        if pos_y == 0:
-            pos_y, pos_x = pos_y, pos_x
-        else:
-            pos_y -= 1
-            pos_x = pos_x
-    elif user_data == 'S':
         if pos_y == 20:
             pos_y, pos_x = pos_y, pos_x
         else:
             pos_y += 1
+            pos_x = pos_x
+    elif user_data == 'S':
+        if pos_y == 0:
+            pos_y, pos_x = pos_y, pos_x
+        else:
+            pos_y -= 1
             pos_x = pos_x
     elif user_data == 'Q':
         break
