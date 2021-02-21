@@ -31,16 +31,14 @@ print('Задача 8. Яйца')
 # Приблизительная глубина безопасной кладки: 0.732421875 м
 
 
-def xxx(level):
-    # 1x ** 3 − 3x ** 2 − 12x + 10-level = 0
-    # a_1 * x^3 - b_1 * x^2 - c_1 * x + d = 0
-
-    # x^3 - a * x^2 - c * x + c = 0
-
-    # a =  3
-    # b =  12
-    # c =  10-level
-    pass
+def max_level_warning(level):
+    x = 0
+    d = (x ** 3) - (3 * x ** 2) - (12 * x) + 10
+    while level <= d:
+        d = (x ** 3) - (3 * x ** 2) - (12 * x) + 10
+        x += .00001
+    print(d)
 
 
 max_level = float(input('Введите максимально допустимый уровень опасности: '))
+max_level_warning(max_level)
