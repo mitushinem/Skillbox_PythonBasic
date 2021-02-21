@@ -26,16 +26,17 @@ def max_to_number(num1, num2):
         return num2
 
 
-def max_number(x1, x2, x3):
-    if max_to_number(x1, x2) >= x3:
-        return print(max_to_number(x1, x2))
-    elif max_to_number(x1, x3) >= x2:
-        return print(max_to_number(x1, x3))
-    elif max_to_number(x2, x3) >= x1:
-        return print(max_to_number(x2, x3))
+# def max_number(x1, x2, x3):
+#     if max_to_number(x1, x2) >= x3:
+#         return print(max_to_number(x1, x2))
+#     elif max_to_number(x1, x3) >= x2:
+#         return print(max_to_number(x1, x3))
+#     elif max_to_number(x2, x3) >= x1:
+#         return print(max_to_number(x2, x3))
 
 
 x1 = int(input('Введите первое число: '))
 x2 = int(input('Введите второе число: '))
 x3 = int(input('Введите третье число: '))
-max_number(x1, x2, x3)
+# max_number(x1, x2, x3)
+print(max_to_number(max_to_number(x1, x2) , x3))
